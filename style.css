@@ -7,20 +7,20 @@
 }
 
 :root {
-  --bg: #0a0a0a;
-  --bg-card: #141414;
-  --bg-card-hover: #1a1a1a;
-  --surface: #1e1e1e;
-  --border: rgba(255, 255, 255, 0.06);
-  --text: #f5f5f5;
-  --text-secondary: #888;
-  --text-muted: #555;
-  --accent: #e8a838;
-  --accent-glow: rgba(232, 168, 56, 0.15);
-  --vata: #60a5fa;
-  --pitta: #f97316;
-  --kapha: #34d399;
-  --gradient-1: linear-gradient(135deg, #e8a838, #f59e0b, #d97706);
+  --bg: #faf6ed;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fff9f0;
+  --surface: #f0e8d8;
+  --border: rgba(139, 105, 20, 0.1);
+  --text: #2c2416;
+  --text-secondary: #6b5d4f;
+  --text-muted: #9a8b7a;
+  --accent: #c78c20;
+  --accent-glow: rgba(199, 140, 32, 0.12);
+  --vata: #5b8fb9;
+  --pitta: #c9653a;
+  --kapha: #5a9e6f;
+  --gradient-1: linear-gradient(135deg, #c78c20, #e8a838, #b07818);
   --radius: 16px;
   --radius-sm: 10px;
 }
@@ -78,7 +78,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(10, 10, 10, 0.6);
+  background: rgba(250, 246, 237, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
@@ -112,7 +112,7 @@ nav ul a {
 
 nav ul a:hover {
   color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(199, 140, 32, 0.08);
 }
 
 /* Hero */
@@ -126,6 +126,8 @@ nav ul a:hover {
   padding: 8rem 5% 4rem;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(160deg, #3e2723 0%, #5d4037 40%, #8b6914 100%);
+  color: #faf6ed;
 }
 
 .hero::before {
@@ -136,7 +138,7 @@ nav ul a:hover {
   transform: translateX(-50%);
   width: 800px;
   height: 800px;
-  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(232, 168, 56, 0.2) 0%, transparent 70%);
   animation: pulse-glow 4s ease-in-out infinite;
   pointer-events: none;
 }
@@ -148,7 +150,7 @@ nav ul a:hover {
   right: -10%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(96, 165, 250, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(122, 158, 126, 0.12) 0%, transparent 70%);
   animation: pulse-glow 5s ease-in-out infinite 1s;
   pointer-events: none;
 }
@@ -164,12 +166,12 @@ nav ul a:hover {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1.25rem;
-  background: rgba(232, 168, 56, 0.08);
-  border: 1px solid rgba(232, 168, 56, 0.15);
+  background: rgba(232, 168, 56, 0.15);
+  border: 1px solid rgba(232, 168, 56, 0.25);
   border-radius: 100px;
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--accent);
+  color: #e8a838;
   margin-bottom: 2rem;
   letter-spacing: 0.05em;
 }
@@ -181,7 +183,7 @@ nav ul a:hover {
   letter-spacing: -0.04em;
   line-height: 1;
   margin-bottom: 1.5rem;
-  background: linear-gradient(to bottom, #ffffff, #888888);
+  background: linear-gradient(to bottom, #fffdf8, #d4b896);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -190,21 +192,21 @@ nav ul a:hover {
 .subtitle {
   font-size: clamp(1.1rem, 2.5vw, 1.35rem);
   font-weight: 300;
-  color: var(--text-secondary);
+  color: rgba(250, 246, 237, 0.75);
   margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
 
 .hero-description {
   font-size: 1rem;
-  color: var(--text-muted);
+  color: rgba(250, 246, 237, 0.55);
   max-width: 520px;
   margin: 0 auto 3rem;
   line-height: 1.7;
 }
 
 .hero-description em {
-  color: var(--accent);
+  color: #e8a838;
   font-style: normal;
   font-weight: 500;
 }
@@ -217,7 +219,7 @@ nav ul a:hover {
   background: var(--gradient-1);
   background-size: 200% 200%;
   animation: gradient-shift 3s ease infinite;
-  color: #000;
+  color: #fff;
   font-weight: 600;
   font-size: 0.9rem;
   border-radius: 100px;
@@ -245,7 +247,7 @@ nav ul a:hover {
   bottom: 2rem;
   left: 50%;
   transform: translateX(-50%);
-  color: var(--text-muted);
+  color: rgba(250, 246, 237, 0.4);
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -261,6 +263,7 @@ nav ul a:hover {
 
 .section-full {
   max-width: 100%;
+  background: #f0e8d8;
   border-top: 1px solid var(--border);
 }
 
@@ -332,8 +335,9 @@ nav ul a:hover {
 
 .card:hover {
   background: var(--bg-card-hover);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(199, 140, 32, 0.25);
   transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(139, 105, 20, 0.08);
 }
 
 .card:hover::before {
@@ -385,7 +389,8 @@ nav ul a:hover {
 
 .dosha:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(199, 140, 32, 0.25);
+  box-shadow: 0 8px 30px rgba(139, 105, 20, 0.08);
 }
 
 .dosha-tag {
@@ -402,21 +407,21 @@ nav ul a:hover {
 }
 
 .dosha-vata .dosha-tag {
-  background: rgba(96, 165, 250, 0.1);
+  background: rgba(91, 143, 185, 0.1);
   color: var(--vata);
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  border: 1px solid rgba(91, 143, 185, 0.25);
 }
 
 .dosha-pitta .dosha-tag {
-  background: rgba(249, 115, 22, 0.1);
+  background: rgba(201, 101, 58, 0.1);
   color: var(--pitta);
-  border: 1px solid rgba(249, 115, 22, 0.2);
+  border: 1px solid rgba(201, 101, 58, 0.25);
 }
 
 .dosha-kapha .dosha-tag {
-  background: rgba(52, 211, 153, 0.1);
+  background: rgba(90, 158, 111, 0.1);
   color: var(--kapha);
-  border: 1px solid rgba(52, 211, 153, 0.2);
+  border: 1px solid rgba(90, 158, 111, 0.25);
 }
 
 .dosha h3 {
@@ -453,7 +458,7 @@ nav ul a:hover {
   font-size: 0.85rem;
   color: var(--text-secondary);
   padding: 0.6rem 0.85rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(139, 105, 20, 0.04);
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
 }
@@ -509,8 +514,9 @@ nav ul a:hover {
 }
 
 .taste:hover {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(199, 140, 32, 0.25);
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(139, 105, 20, 0.06);
 }
 
 .taste-name {
@@ -553,7 +559,8 @@ nav ul a:hover {
 
 .diet-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(199, 140, 32, 0.25);
+  box-shadow: 0 8px 30px rgba(139, 105, 20, 0.08);
 }
 
 .diet-card h4 {
@@ -584,7 +591,7 @@ nav ul a:hover {
 }
 
 .good h5 { color: var(--kapha); }
-.bad h5 { color: #ef4444; }
+.bad h5 { color: #b84233; }
 
 .diet-lists ul {
   list-style: none;
@@ -610,7 +617,7 @@ nav ul a:hover {
 }
 
 .good li::before { background: var(--kapha); }
-.bad li::before { background: #ef4444; }
+.bad li::before { background: #b84233; }
 
 /* Rules */
 .rules-grid {
@@ -631,7 +638,8 @@ nav ul a:hover {
 }
 
 .rule:hover {
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(199, 140, 32, 0.25);
+  box-shadow: 0 4px 15px rgba(139, 105, 20, 0.06);
 }
 
 .rule-number {
@@ -724,12 +732,13 @@ nav ul a:hover {
 footer {
   text-align: center;
   padding: 3rem 5%;
-  border-top: 1px solid var(--border);
+  background: #3e2723;
+  color: #faf6ed;
 }
 
 footer p {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: rgba(250, 246, 237, 0.7);
 }
 
 footer .footer-brand {
@@ -746,7 +755,7 @@ footer .footer-brand {
 .disclaimer {
   margin-top: 0.5rem;
   font-size: 0.75rem !important;
-  color: var(--text-muted) !important;
+  color: rgba(250, 246, 237, 0.4) !important;
 }
 
 /* Responsive */
